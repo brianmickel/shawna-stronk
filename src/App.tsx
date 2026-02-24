@@ -63,13 +63,11 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <div className="container" onClick={handleClick} onTouchStart={handleClick}>
       <img
         src="/shawna-stronk.png"
         alt="SHAWNA STRONK"
         className="title-image"
-        onClick={handleClick}
-        onTouchStart={handleClick}
       />
       <p className={`hint${showHint ? " hint--visible" : ""}`}>
         TAP/CLICK THE TEXT
