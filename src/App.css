@@ -24,3 +24,12 @@
 .hint--visible {
   color: rgba(255, 255, 255, 0.35);
 }
+
+@keyframes barrel-roll {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.barrel-roll {
+  animation: barrel-roll 1s linear;
+}
