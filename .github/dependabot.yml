@@ -6,8 +6,14 @@ updates:
       interval: monthly
     groups:
       npm-dependencies:
-        patterns:
-          - "*"
+        patterns: ["*"]
+    ignore:
+      # typescript-eslint does not support TypeScript 7 yet
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
+      # tracks the Node major in .nvmrc; bump together with Node
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: github-actions
     directory: /
@@ -15,5 +21,4 @@ updates:
       interval: monthly
     groups:
       github-actions:
-        patterns:
-          - "*"
+        patterns: ["*"]
